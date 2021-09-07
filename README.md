@@ -7,6 +7,8 @@ Demo: TODO
 
 Source: https://github.com/z-sean-huang/nodejs-kafka-client
 
+![nodejs-kafka-client screenshot](http://github.com/z-sean-huang/nodejs-kafka-client/blob/main/screenshots/nodejs_kafka_client_01.JPG?raw=true)
+
 #### Steps to setup the service:
 ```
 // Download the source code to your local
