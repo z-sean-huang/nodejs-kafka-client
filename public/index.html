@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kafka testing monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 gy-3">
+                <label for="kf_borker_log" class="form-label" id="kf_broker_log_path">Kafka Broker Log:</label>
+                <textarea rows="10" class="form-control" id="kf_broker_log" readonly></textarea>
+            </div>
+            <div class="col-6 gy-3">
+                <label for="kf_topic_log" class="form-label" id="kf_topic_log_path">Kafka Topic Log:</label>
+                <textarea rows="8" class="form-control" id="kf_topic_log" readonly></textarea>
+            </div>
+            <div class="col-6 gy-3">
+                <label for="kf_consumer_log" class="form-label">Kafka Consumer Log:</label>
+                <textarea rows="8" class="form-control" id="kf_consumer_log" readonly></textarea>
+            </div>
+            <div class="col-12 gy-5">
+                <div class="form-floating form-inline gy-5">
+                    <input type="text" class="form-control mb-2" id="kf_producer_msg"
+                        placeholder="string message you want to send">
+                    <label for="kf_producer_msg">Please Enter Producer Message</label>
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="The producer message should appear in consuemr log after brokder delivers the message"
+                        id="btn_send_producer_msg">Send Producer Message to
+                        Kafka Brokers</button>
+                </div>
+            </div>
+            <div class="col-12 gy-4">
+                <label for="kf_perf_test_result" class="form-label">Kafka Producer Performance Test Result:</label>
+                <textarea rows="4" class="form-control" id="kf_perf_test_result" readonly></textarea>
+            </div>
+            <div class="col-12 gy-2">
+                <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Run Kafka built-in tool 'bin/kafka-producer-perf-test.sh'" id="btn_perf_test">Run Perducer
+                    Performance Test</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
