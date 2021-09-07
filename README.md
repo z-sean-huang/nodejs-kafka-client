@@ -3,7 +3,7 @@
 
 #### Software stacks: Socket.io/Node.js, Apache Kafka, Bootstrap
 
-Demo: TODO
+Demo: http://ec2-54-153-94-204.us-west-1.compute.amazonaws.com/
 
 Source: https://github.com/z-sean-huang/nodejs-kafka-client
 
